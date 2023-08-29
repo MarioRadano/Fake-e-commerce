@@ -1,0 +1,31 @@
+.container{
+    margin: 2vh 16vw 8vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-evenly;
+    gap:8vh; 
+    position:relative;
+}
+
+
+.container h1, .container p{
+    transition:0.8s ease;
+    position:relative;
+}
+.container h1{
+    line-height:3rem;
+	letter-spacing:0.1em;
+    color:var(--primary)
+}
+
+.nonscrolled h1{
+    left:100vw;
+}
+.nonscrolled p{
+    left:-100vw;
+}
+.scrolled h1, .scrolled p{
+    left:0;
+}
+

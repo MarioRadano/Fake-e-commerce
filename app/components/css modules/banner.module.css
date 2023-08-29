@@ -1,0 +1,23 @@
+.banner{
+    display:none;
+}
+
+.carousel a{
+    margin:0 important!
+}
+@media screen and (min-width:768px){
+    .carousel{
+        display:none;
+    }
+    .banner{
+        display:flex;
+        width:100%;
+        justify-content:space-evenly;
+    }
+    .banner a{
+        width:100%;
+        margin:0 !important;
+        
+    }
+    
+}

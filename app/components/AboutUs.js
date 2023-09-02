@@ -7,14 +7,14 @@ export default function AboutUs(){
     const [scrolled, setScrolled] = useState(styles.nonscrolled)
     
     const handleScroll = () => {
-        
+        console.log(window.scrollY)
         if (window.scrollY > 90) {
             setScrolled(styles.scrolled)
         } 
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)
             

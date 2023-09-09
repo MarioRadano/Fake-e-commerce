@@ -8,7 +8,9 @@
   -webkit-text-stroke-color: var(--primary);
 }
 
-
+.carousel{
+    width:100%;
+}
 .card{
     background-color:white;
     display:flex;

@@ -12,23 +12,88 @@
     width:100%;
 }
 .card{
-    background-color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-evenly;
-    align-items:center;
-    padding: 10px min(35px,4vw);
+    position:relative;
     min-height:450px;
 }
+
 .card img{
-    width:250px;
-    height:250px;
+    width:200px;
+    height:200px;
     object-fit: contain;
 }
 
 .carouselmd{
     display:none;
 }
+
+.detailsButton{
+    height:40px;
+    width:150px;
+    background-color: transparent;
+    border:none;
+    transition:0.5s ease;
+    cursor:pointer;
+}
+.detailsButton h2{
+    color:var(--primary);
+    transition:0.5s ease;
+}
+.detailsButton:hover{
+    background-color: var(--primary);
+}
+.detailsButton:hover h2{
+    color:var(--background)
+}
+.productCard,
+.detailsCard{
+    background-color:white;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition:0.5s ease;
+}
+.productCard{
+    padding: 10px min(35px,4vw);
+    transform:rotateY(0deg);
+}
+.detailsCard{
+    padding:0 20px 0;
+    transform: rotateY(180deg);
+}
+
+.visible .detailsCard{
+    transform: rotateY(0deg);
+}
+.visible .productCard{
+    transform:rotateY(180deg);
+}
+.detailsCard img{
+    height:130px;
+}
+
+
+.back{
+    position:absolute;
+    top:5px;
+    left:85%;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+.back span{
+    font-size:37px;
+    font-weight:bold;
+    color:var(--primary);
+}
+
 
 
 /*----------------------------desktop------------------------------------------------*/
@@ -43,7 +108,7 @@
     }
     
     .carouselmd{
-        display:flex;
+        display:block;
         width:100%;
     
     }
@@ -52,14 +117,29 @@
         width:100%;
         display:flex;
         justify-content: space-evenly;
+        
     
     }
     .card{
         width:min(300px, 35vw);
-        min-height:500px;
-        transition: 0.5s ease;
-        margin:5vh 0;
+        transition:0.5s ease;
+        margin:20px 0;
     }
+    
+     
+    
+    
+    
+    .counter button:active{
+        background-color:var(--primary);
+        color:var(--background);
+
+    }
+    .productCard:hover,
+    .detailsCard:hover{
+        box-shadow:4px 5px 24px 5px rgba(0,0,0,0.48);
+    }
+
     .buttons h2{
         font-size:1.2rem;
         width:80px !important;
@@ -71,18 +151,24 @@
         width:80px !important;
         transition:0.5s ease;
     }
-    
     .add:hover{
         background-color: var(--primary);
-        color:var(--background);
+        color:white;
     }
-    .counter button:active{
-        background-color:var(--primary);
-        color:var(--background);
+    .add:active{
+        background-color:white;
+        color:var(--primary);
+        transition:0.1s;
 
     }
-    .card:hover{
-        box-shadow:4px 5px 24px 5px rgba(0,0,0,0.48);
+    .counter button:hover{
+        background-color:var(--primary);
+        color:white;
+    }
+    .counter button:active{
+        background-color:white;
+        color:var(--primary);
+        transition:0.1s;
     }
 }
 
@@ -118,8 +204,7 @@ text-decoration-color: var(--primary);
 }
 .counter{
     height:40px;
-    border: 2px solid var(--primary);
-    border-right:none;
+    border:none;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -134,8 +219,16 @@ text-decoration-color: var(--primary);
     border:none;
     background-color:transparent;
     color: var(--primary);
-    
+    transition: 0.5s ease;
 }
+
+.counter button:active{
+    background-color:var(--primary);
+    color:white;
+    transition:0.1s;
+}
+
+
 .add{
     display:flex;
     align-items:center;
@@ -146,6 +239,11 @@ text-decoration-color: var(--primary);
     border: solid 2px var(--primary);
     height:40px;
     font-size:1.1rem;
-    
 }
+.add:active{
+    background-color:var(--primary);
+    color:white;
+    transition:0.1s;
+}
+
 

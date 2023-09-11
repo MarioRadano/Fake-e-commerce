@@ -12,7 +12,7 @@ export default function Footer() {
         <div className={styles.container}>
         <p>This site was realized using React and NextJS by Mario Radano</p>
         <p>Mail: radanomario@hotmail.it</p>
-        <a href='https://drive.google.com/drive/folders/1Yuu4216gGWVrQdSfIDSfOOgCuVM4DLui?usp=sharing'> <p>See all my projects</p> </a>
+        <a href='portfolio-eight-drab-60.vercel.app'> <p>See all my projects</p> </a>
         <a href='https://drive.google.com/file/d/1nksd59G26FmIVOicr-Z9qi8_inWwl5LG/view?usp=sharing'> <p>Read my CV</p> </a>
         <p>2023</p>
         

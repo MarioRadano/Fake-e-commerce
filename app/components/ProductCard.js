@@ -1,5 +1,3 @@
-'use client'
-
 import styles from './css modules/productcard.module.css'
 
 
